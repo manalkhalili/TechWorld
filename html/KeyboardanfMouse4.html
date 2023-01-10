@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../Css/Subproduct.css">
+</head>
+<body>
+<nav>
+    <div class="logo"> <a href="Home.html" class="logo ">
+        <img id="imgLogo" src="../Imgs/logo1.png" style='height:30px; width:50px' > TECH WORLD</a>
+    </div>
+    <div class="nav-items">
+        <li> <a href="Home.html">Home</a> </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="#">Work</a></li>
+    </div>
+    <div class="search-icon">
+        <span class="fa fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+        <span class="fa fa-times"></span>
+    </div>
+    <form action="#">
+        <input type="search" class="search-data" placeholder="search...">
+        <button type="submit" class="fa fa-search"></button>
+    </form>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = ()=>{
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = ()=>{
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = ()=>{
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <div class="user-icon">
+        <!-- Button trigger modal -->
+        <a type="button" class=" fa fa-user-circle btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal"
+           style="background: none; border: none; font-size: 35px">
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal"  role="dialog" >
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel" style="color: #001a4d">Login here</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="avatarImg">
+                            <img src="Imgs/avatar.png" class="avatar">
+                        </div>
+
+                        <div class="form-group para">
+                            <p class="fa fa-user"> Username</p>
+                            <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group para">
+                            <p class="fa fa-lock"> Password</p>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                        </div>
+                    </div >
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Log in</button>
+                        <a href="#">Lost your password?</a>
+                        <a href="#">Don't have an account?</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+        <!--                <li><a class="fas fa-user " href="#"> My profile</a></li>-->
+        <!--                <li><a class="fa fa-cogs" href="#"> Settings</a></li>-->
+        <!--                <li><a class="fas fa-sign-out-alt  " href="#"> Sign out</a></li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+    <div class="shopping-icon">
+        <a href="#"> <i class="fas fa-shopping-cart"></i>
+            <span class="counter-shopping">1</span>
+        </a>
+    </div>
+
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../Imgs/keyandmouse4.png" class="d-block w-100" alt="...">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <p class="newarrival text-center">  NEW </p>
+            <h2>SILVERLINE SCORPIUS GAMING PACKAGE
+
+
+            </h2>
+            <p style="color: #001a4d">PRODUCT CODE:KB+M-SCORPIUS</p>
+            <div class = "rating">
+                <span><i class = "fas fa-star"></i></span>
+                <span><i class = "fas fa-star"></i></span>
+                <span><i class = "fas fa-star"></i></span>
+                <span><i class = "fas fa-star"></i></span>
+                <span><i class = "far fa-star"></i></span>
+            </div>
+            <p class = "product-price1">₪79.00
+            </p>
+
+            <p><b>Availability: </b>In stock</p>
+            <p><b>Condition: </b>New</p>
+            <p><b>Brand: </b>SilverLine</p>
+            <label  >Quantity: </label>
+            <input type="text" value="1">
+            <button type="button" class="btn btn-default cart">Add to cart</button>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

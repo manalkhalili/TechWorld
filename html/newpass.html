@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>
+        new password
+    </title>
+    <link rel="stylesheet" type="text/css" href="../Css/newpass.css">
+</head>
+
+<body>
+<div class="loginbox">
+    <img src="../Imgs/sign-concept-illustration_114360-125.jpg" class="avatar">
+    <h1> new password </h1>
+    <h3> Enter your new password</h3>
+    <form method="post" action="../php/Forgotpass.php">
+        <p>
+            New password
+        </p>
+        <input type="password" name="pass1" placeholder="creat your new password" style="color: black">
+        <p>
+            Confirm your password
+        </p>
+        <input type="password" name="pass2" placeholder="Confirm your password" style="color: black">
+        <input type="submit" name="changePass" value="Change">
+        <a href="../php/Home.php">back to Home </a><br>
+        <a href="../php/login.php">back to login</a><br>
+        <a href="../php/SignUp.php">
+            Don't have an account? sign up
+        </a>
+    </form>
+</div>
+
+</body>
+
+</html>

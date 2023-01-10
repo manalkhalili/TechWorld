@@ -1,0 +1,22 @@
+.txtColor {
+    color: #e7eaf0;
+}
+
+.txtColor1 {
+    color: #001a4d;
+}
+
+.bgColor {
+    background-color: #001a4d;
+}
+
+.bgColor1 {
+    background-color: #e7eaf0;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../Imgs/back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
